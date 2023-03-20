@@ -8,10 +8,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/user")
 public class UserController {
 	
+	//회원가입 화면
 	@GetMapping("/signup/view")
 	public String signupInput() {
 		
 		return "/user/signup";
+	}
+	
+	
+	//로그인 화면
+	@GetMapping("/signin/view")
+	public String signinInput() {
+		
+		return "/user/signin";
 	}
 	
 	
