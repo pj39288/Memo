@@ -62,6 +62,7 @@ public class UserRestController {
 			// 딱 1 사용자를 위해 할당된 session임
 			HttpSession session = request.getSession();
 			
+			// session에 로그인 정보 기록 (꼭 필요한 필수요소만 기록할 것)
 			session.setAttribute("userId", user.getId());
 			session.setAttribute("userName", user.getName());
 			
@@ -73,4 +74,9 @@ public class UserRestController {
 		return resultMap;
 		
 	}
+	
+	
+	
+	
+	
 }
