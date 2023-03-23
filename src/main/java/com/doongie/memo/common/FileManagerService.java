@@ -18,6 +18,14 @@ public class FileManagerService {
 	
 	public static String saveFile(int userId, MultipartFile file) {
 		
+		
+		
+		if(file == null) {
+			return null;
+		}
+		
+		
+		
 		// 사용자 별로 폴더를 구분
 		// 중복되지않게 하기위해
 		// 시간을 포함해서 구분 

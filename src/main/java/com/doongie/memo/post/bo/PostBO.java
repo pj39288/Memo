@@ -27,7 +27,7 @@ public class PostBO {
 		
 		
 		return postDAO.insertPost(userId, title, content, imagePath);
-					
+							
 	}
 	
 	public List<Post> getPostList(int userId) {
