@@ -19,14 +19,13 @@ public class PostBO {
 	public int addPost(
 			int userId
 			, String title
-			, String content
-			, MultipartFile file) {
+			, String content) {
 		
 		// 파일 저장 -> 파일 경로 생성 -> DB에 저장
-		FileManagerService.saveFile(userId, file);
+		// FileManagerService.saveFile(userId, file);
 		
 		
-		return postDAO.insertPost(userId, title, content, imagePath);
+		return postDAO.insertPost(userId, title, content);
 							
 	}
 	
@@ -38,5 +37,19 @@ public class PostBO {
 	public Post getPost(int id) {
 		
 		return postDAO.selectPost(id);
+	}
+	
+	public int updatePost(
+			int postId
+			, String title
+			, String content) {
+		
+		return postDAO.updatePost(postId, title, content);
+	}
+	
+	public int deletePost(int postId) {
+		
+		return postDAO.deletePost(postId);
+		
 	}
 }
